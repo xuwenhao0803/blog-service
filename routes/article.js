@@ -114,9 +114,10 @@ router.get("/detail", async (req, res, next) => {
   }
 });
 //获取列表接口
-router.get("/detail/:id", async (req, res, next) => {
+router.get("/detail/content", async (req, res, next) => {
   try {
-    const id = req.params.id;
+    const id = req.query.id;
+ //   const id = req.params.id;
     let list = await querySql("select * from article where id=?", [id]);
     if (list) {
       res.send({ code: "0", msg: "success", data: list[0] });

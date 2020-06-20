@@ -31,7 +31,7 @@ app.use(
       "/api/user/login",
       "/api/user/upload",
       "/api/article/list",
-      "/api/article/detail/:id",
+      "/api/article/detail/content",
       "/api/comment/list",
     ],
   })
